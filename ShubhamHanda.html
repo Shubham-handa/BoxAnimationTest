@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <!-- CSS Properties -->
+    <style>
+        .outer {
+            width: 1000px;
+            height: 350px;
+            padding: 0px;
+            background-color: rgb(2, 27, 51);
+            border: 15px solid rgb(2, 27, 51);
+            display: flex;
+            margin-top: 100px;
+            margin-left: 200px;
+            flex-direction: row-reverse;
+            transform: rotate(180deg);
+        }
+
+        #inner1 {
+            width: 200px;
+            height: 350px;
+            position: relative;
+            background-color: blueviolet;
+
+
+        }
+
+
+
+        #inner2 {
+            width: 200px;
+            height: 350px;
+            position: relative;
+            background-color: darkmagenta;
+
+        }
+
+        #inner3 {
+            width: 200px;
+            height: 350px;
+            position: relative;
+
+            background-color: hotpink;
+        }
+
+        #inner4 {
+            width: 200px;
+            height: 350px;
+            position: relative;
+            background-color: salmon;
+        }
+
+        #inner5 {
+            background-color: sandybrown;
+            width: 200px;
+            height: 350px;
+            position: relative;
+        }
+
+
+        @keyframes mymove5 {
+            from {
+                height: 350px;
+                animation-timing-function: ease-in-out;
+            }
+
+            25% {
+                height: 192px;
+                animation-timing-function: ease-in-out;
+            }
+
+            50% {
+                height: 100px;
+                animation-timing-function: ease-in-out;
+            }
+
+            75% {
+                height: 176px;
+                animation-timing-function: ease-in-out;
+            }
+
+            to {
+                height: 340px;
+            }
+        }
+
+        @keyframes mymove4 {
+            from {
+                height: 350px;
+                animation-timing-function: ease-in-out;
+            }
+
+            25% {
+                height: 45px;
+                animation-timing-function: ease-in-out;
+            }
+
+            50% {
+                height: 200px;
+                animation-timing-function: ease-in-out;
+            }
+
+            75% {
+                height: 50px;
+                animation-timing-function: ease-in-out;
+            }
+
+            to {
+                height: 310px;
+            }
+        }
+
+        @keyframes mymove3 {
+            from {
+                height: 350px;
+                animation-timing-function: ease-in-out;
+            }
+
+            25% {
+                height: 250px;
+                animation-timing-function: ease-in-out;
+            }
+
+            50% {
+                height: 235px;
+                animation-timing-function: ease-in-out;
+            }
+
+            75% {
+                height: 266px;
+                animation-timing-function: ease-in-out;
+            }
+
+            to {
+                height: 30px;
+            }
+        }
+
+        @keyframes mymove2 {
+            from {
+                height: 350px;
+                animation-timing-function: ease-in-out;
+            }
+
+            25% {
+                height: 25px;
+                animation-timing-function: ease-in-out;
+            }
+
+            50% {
+                height: 300px;
+                animation-timing-function: ease-in-out;
+            }
+
+            75% {
+                height: 300px;
+                animation-timing-function: ease-in-out;
+            }
+
+            to {
+                height: 240px;
+            }
+        }
+
+        @keyframes mymove {
+            from {
+                height: 350px;
+                animation-timing-function: ease-in-out;
+
+            }
+
+            25% {
+                height: 15px;
+                animation-timing-function: ease-in-out;
+            }
+
+            50% {
+                height: 270px;
+                animation-timing-function: ease-in-out;
+            }
+
+            75% {
+                height: 330px;
+                animation-timing-function: ease-in-out;
+            }
+
+            to {
+                height: 190px;
+            }
+        }
+
+        #buttons {
+            margin: auto;
+            display: grid;
+            grid-template-columns: 10fr 10fr;
+        }
+
+        #startbtn {
+            width: 100px;
+            background-color: darkgreen;
+            color: white;
+            margin-top: 35px;
+            margin-left: 525px;
+            height: 30px;
+            border-color: darkgreen;
+        }
+
+        #stopbtn {
+            width: 100px;
+            background-color: red;
+            color: white;
+            margin-top: 35px;
+            height: 30px;
+            margin-left: 50px;
+            border-color: red;
+        }
+
+        #startbtn:hover {
+            border-color: blue;
+        }
+
+        #stopbtn:hover {
+            border-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="outer">
+        <div id="inner1"></div>
+        <div id="inner2"></div>
+        <div id="inner3"></div>
+        <div id="inner4"></div>
+        <div id="inner5"></div>
+    </div>
+    <div id="buttons">
+        <button id="startbtn">Start</button>
+        <button id="stopbtn">Stop</button>
+    </div>
+    <!-- JAVASCRIPT CODE -->
+    <script>
+
+        startbtn.addEventListener("click", function () {
+            inner1.style.animation = "mymove 5s infinite";
+            inner2.style.animation = "mymove2 5s infinite";
+            inner3.style.animation = "mymove3 5s infinite";
+            inner4.style.animation = "mymove4 5s infinite";
+            inner5.style.animation = "mymove5 5s infinite";
+        });
+
+        stopbtn.addEventListener("click", function () {
+            inner1.style.animationPlayState = "paused";
+            inner2.style.animationPlayState = "paused";
+            inner3.style.animationPlayState = "paused";
+            inner4.style.animationPlayState = "paused";
+            inner5.style.animationPlayState = "paused";
+        });
+
+
+    </script>
+</body>
+
+</html>
